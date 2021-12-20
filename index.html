@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asserts/thoitrangnu.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e9a94fc643.js" crossorigin="anonymous"></script>
+    <title>Thời Trang Nữ</title>
+</head>
+
+<body>
+    <div class="container-fluid " id="homePage">
+        <nav class="nav-bar">
+            <a href="">Trang chủ</a>
+            <a href="">Thời Trang Nam</a>
+            <a href="">Thời Trang Nữ</a>
+            <a href="">Tin tức</a>
+            <input id="inputPro" type="text" placeholder="Tìm kiếm..." oninput="SearchPro()">
+            <ul id="list-names">
+                <li class="pro-name">Áo khoác da Dior</li>
+                <li class="pro-name">Váy & Túi Dior</li>
+                <li class="pro-name">Túi xách Dior</li>
+                <li class="pro-name">Dior</li>
+            </ul>
+            <button>Tìm Kiếm</button>
+            <button type="button" onclick="goCardPage()"><i class="fas fa-cart-plus"></i></button>
+        </nav>
+        <div class="title">
+            <h2>thời trang nữ</h2>
+        </div>
+        <div id="productWoman"></div>
+        <div class="title">
+            <h2>thời trang nam</h2>
+        </div>
+        <div id="productMan"></div>
+    </div>
+
+
+    <div id="cardPage">
+        <div class="row bg-info py-3 mb-3">
+            <div id="headerCardPage" class="col-md-8 px-5">
+
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-danger" onclick="backHomePage()">Tiếp tục xem giỏ hàng</button>
+            </div>
+
+        </div>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>STT</th>
+                    <th>Ảnh minh họa</th>
+                    <th>Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Tổng</th>
+                </tr>
+            </thead>
+            <thead id="card">
+            </thead>
+            <thead>
+                <tr>
+                    <td colspan="5"></td>
+                    <td id="allTotal"></td>
+                </tr>
+            </thead>
+
+        </table>
+        <div class="row container-fluid">
+            <div class="col-md-4 offset-md-9">
+                <h4 class="text-left ">Cộng giỏ hàng</h4>
+                <div class="row border p-2 rounded my-2">
+                    <div class="col-md-7 ">
+                        Tạm tính
+                    </div>
+                    <div class="col-md-5 font-weight-bold" id="tamTinh">
+
+                    </div>
+                </div>
+
+                <div class="row border p-2 rounded my-2">
+                    <div class="col-md-7">
+                        Tổng
+                    </div>
+                    <div class="col-md-5 font-weight-bold" id="tong">
+
+                    </div>
+                </div>
+
+                <div class="row p-2  my-2">
+                    <button type="button" class="btn btn-primary" onclick="goPaymentPage()">Tiến hành thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trang thanh toan -->
+    <div class=" bg-light" id="paymentPage">
+        <div class="container">
+            <div class="text-danger font-weight-bold">
+                Đặt mua mẫu: AT01
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div>
+                        <div class="text-success font-weight-bold">
+                            1: Nhập thông tin khách hàng
+                        </div>
+                        <input type="text" class="w-100 py-2 my-2" name="name" id="name3" placeholder="Họ và tên ">
+                        <input type="text" class="w-100 py-2 my-2" name="phone" id="phone3" placeholder="Điện thoại">
+                        <input type="text" class="w-100 py-2 my-2" name="email" id="email3" placeholder="Email">
+                        <input type="text" class="w-100 py-2 my-2" name="address" id="address3" placeholder="Địa chỉ">
+                        <textarea name="note" class="w-100" rows="5" id="note3" placeholder="Ghi chú"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <div class="text-success font-weight-bold">
+                            2: Chọn hình thức thanh toán
+                        </div>
+                        <select name="payment" class="w-100 my-2">
+                            <option value="Internet Banking/ATM nội địa">Internet Banking/ATM nội địa</option>
+                            <option value="Javascript">Javascript</option>
+                        </select> Thanh toán online bằng Internet Banking hoặc thẻ ATM nội địa để được giảm giá ngay 5%, hỗ trợ tất cả ngân hàng, thanh toán an toàn qua cổng VTCPAY
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div>
+                        <table class="table table-hover table-borderless ">
+                            <tr>
+                                <td>Tên sản phẩm </td>
+                                <td id="pname3"></td>
+                            </tr>
+                            <tr>
+                                <td>Tạm tính</td>
+                                <td id="tamTinh3"></td>
+                            </tr>
+                            <tr>
+                                <td>Giảm giá</td>
+                                <td id="giamGia3"></td>
+                            </tr>
+                            <tr>
+                                <td>Tổng cộng</td>
+                                <td id="tongCong"></td>
+                            </tr>
+
+                        </table>
+
+                        <button type="button" class="btn btn-primary w-100 my-3" data-toggle="modal" data-target="#payment" onclick="pconfirm3()">
+                                Tiến hành thanh toán
+                              </button>
+                        <button class="btn btn-danger" onclick="backHomePage()">
+                                Quay lại trang chủ
+                            </button>
+
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="payment" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Xác nhận lại thông tin</h5>
+                                        <button type="button" class="close btn-danger" data-dismiss="modal">
+                                        <span aria-hidden="true">X</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="modal-body" id="confirm">
+
+                                        </div>
+                                        <button type="button" class="btn btn-warning text-center" id="confirmed" data-dismiss="modal" onclick="goBillPage()">Xác nhận </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="billPage">
+        <h2>Your order</h2>
+        <div id="main-bill">
+            <div id="info-shop">
+                <button id="chat"><i class="far fa-comments"></i> Chat</button>
+                <button type="button" id="back-shop" onclick="backHomePage()">Xem shop</button>
+            </div>
+            <div id="product-bill">
+                <div id="product-details">
+                </div>
+                <div id="total-price">
+                    <div id="total-text">Total</div>
+                    <div id="total-value"></div>
+                </div>
+                <div id="delivery-address">
+                    <h3>Delivery address</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="asserts/thoitrangnu.js"></script>
+</body>
+
+
+</html>

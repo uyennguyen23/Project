@@ -1,0 +1,202 @@
+* {
+    font-size: 20px;
+}
+
+.container-fluid {
+    max-width: 100%;
+}
+
+#cardPage,
+#paymentPage,
+#billPage {
+    display: none;
+}
+
+.nav-bar {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(224, 87, 110);
+}
+
+.nav-bar a {
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-bar a:hover {
+    color: #000;
+}
+
+.nav-bar button,
+.nav-bar input {
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: solid 1px gray;
+}
+
+.nav-bar button {
+    color: #fff;
+    border: none;
+    background-color: black;
+}
+
+.nav-bar input {
+    width: 20%;
+    border: none;
+    position: relative;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+#list-names {
+    position: absolute;
+    display: none;
+}
+
+.proWoman {
+    display: flex;
+    gap: 50px;
+}
+
+.proMan {
+    display: flex;
+    gap: 50px;
+}
+
+.pro-name {
+    padding: 2px;
+    background-color: pink;
+    border-bottom: #FFF 1px solid;
+    border-left: #FFF 1px solid;
+    border-right: #FFF 1px solid;
+    ;
+    border-radius: 2px;
+    width: 370px;
+    margin-left: 235%;
+}
+
+.title {
+    padding: 40px 20px;
+    text-align: center;
+    color: rgb(224, 87, 110);
+    text-transform: uppercase;
+}
+
+#productWoman {
+    margin-left: 19%;
+    text-align: center;
+    display: flex;
+}
+
+#productMan {
+    margin-left: 19%;
+    text-align: center;
+    display: flex;
+}
+
+
+/* #productWoman button{
+    background-image: linear-gradient( to right, black 30%, rgb(224, 87, 110));
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+} */
+
+
+/* #productWoman img{
+    text-align: center;
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    margin-bottom: 5%;
+} */
+
+.proButton {
+    background-image: linear-gradient( to right, black 30%, rgb(224, 87, 110));
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+#billPage{
+    background: linear-gradient(to right,pink,wheat);
+    margin: 0 100px ;
+}
+#billPage h2{
+    font-size: 30px;
+    color: red;
+    text-align: center;
+}
+#info-shop{
+    margin-left: 40px;
+}
+#chat, #back-shop{
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 13px;
+    color: white;
+}
+#chat{
+    width: 70px;
+    background-color: red;
+}
+#back-shop{
+    width: 90px;
+    background-color: green;
+}
+#delivery-address{
+    margin-left: 40px;
+}
+#delivery-address h3{
+    font-size: 18px;
+}
+.item-last{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.item-describe{
+    height: 100%;
+    display: flex;
+    gap: 15px;
+}
+.item-describe img{
+    height: 100%;
+}
+.name-item{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+.amount, .item-total-price{
+    font-size: 17px;
+}
+.userName, .phoneNum, .address{
+    font-size: 15px;
+}
+.info-deli{
+    padding: 0 5px;
+}
+#total-price{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+#total-text, #total-value{
+    text-align: right;
+    padding-right: 40px;
+}
